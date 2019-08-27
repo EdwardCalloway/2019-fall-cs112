@@ -6,6 +6,6 @@ I like long walks on the beach
 
 My email is EdwardRCalloway@gmail.com, if your in cs 112 and just looking at other peoples work hit me up sometime because I probably need the help.
 
-This is a link: [link to google](http://google.com).
+This is a link: [link to google](https://github.com/acarteas/2019-fall-cs112.git).
 
 To view this with VS-Code, press ctrl+shift+v to preview.
