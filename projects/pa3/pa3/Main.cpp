@@ -5,60 +5,44 @@
 #include <string>
 using namespace std;
 
-int main() {
+int main()
+{
 	string filename;
-	cout << "Please Enter then name of the file you want to read." << "\n";
+	string outputname;
+	cout << "Please Enter the name of the input file \n";
 	cin >> filename;
+	cout << "Please enter the name of the output file \n";
+	cin >> outputname;
 	string line;
 	ifstream myfile(filename);
+	fstream output(outputname);
 	int linechecker = 0;
 	if (myfile.is_open())
 	{
-
+		//This just puts everything into output.ppm
 		while (getline(myfile, line))
 		{
-			if (linechecker == 0)
-			{
-				cout << "Image Format : " << line << '\n';
-				linechecker = linechecker + 1;
-			}
-			else if (linechecker == 1)
-			{
-				cout << "Width: " << line.substr(0, 1) << '\n' << "Length: " << line.substr(2, 3) << '\n';
-				linechecker = linechecker + 1;
-			}
-			else if (linechecker == 2)
-			{
-				cout << "Max Pixel Value : " << line << '\n' << "Data :" << '\n';
-				linechecker = linechecker + 1;
-			}
-			else
-			{
-				int counter = 0;
-				//Make every third item in the list 0 starting with element 0.
-				for (int i = 1; i < line.length(); i++)
-				{
-					if (counter = 0 || counter % 3 == 1) 
-					{
-						cout << "0";
-					}
-					else 
-					{
-						cout << line.substr(i - 1, i);
-					}
-					counter = counter + 1;
-				}
-				cout << '\n';
-			}
-
+			output << line << '\n';
 		}
 		myfile.close();
+		//Now I just have to print out the output file
+		if (output.is_open()) {
+			while (getline(output, line))
+			{	
+				cout << line << '\n';
+			}
+			output.close();
+
+		}
+
+
 
 	}
+	else {
 
-	else cout << "Unable to open file";
-
-
-
+	}
 	return 0;
 }
+
+
+
