@@ -6,8 +6,11 @@
 using namespace std;
 
 int main() {
+	string filename;
+	cout << "Please Enter then name of the file you want to read." << "\n";
+	cin >> filename;
 	string line;
-	ifstream myfile("tinypix.ppm");
+	ifstream myfile(filename);
 	int linechecker = 0;
 	if (myfile.is_open())
 	{
@@ -31,7 +34,21 @@ int main() {
 			}
 			else
 			{
-				cout << line << '\n';
+				int counter = 0;
+				//Make every third item in the list 0 starting with element 0.
+				for (int i = 1; i < line.length(); i++)
+				{
+					if (counter = 0 || counter % 3 == 1) 
+					{
+						cout << "0";
+					}
+					else 
+					{
+						cout << line.substr(i - 1, i);
+					}
+					counter = counter + 1;
+				}
+				cout << '\n';
 			}
 
 		}
