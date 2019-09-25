@@ -5,7 +5,6 @@
 #include <vector>
 #include <sstream>
 #include "FileHelpers.h"
-#include "HelperFunctions.h"
 using namespace std;
 /*
 Properties of PPM Document:

@@ -10,6 +10,9 @@
 
 int main(int argc, char* argv[])
 {
+
 	PpmDocument doc{ "tinypix.ppm" };
+	cout << doc.getImageFormat();
+
 	return 0;
 }

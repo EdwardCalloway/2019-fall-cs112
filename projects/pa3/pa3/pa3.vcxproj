@@ -124,6 +124,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="FileHelpers.cpp" />
+    <ClCompile Include="HelperFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileHelpers.h" />
